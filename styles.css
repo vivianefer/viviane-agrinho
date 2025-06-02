@@ -1,0 +1,310 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #777777;
+    --botao-verde: #3B6E22;       
+    --rodape-fundo: #6E4B2A;      
+    --botao-ativo: #A4C639;       
+    --botao-laranja: #A4C639;     
+    --cor-de-fundo: #F2E9DC;      
+    --preto-escuro: #5c8946;      
+    --botao-azul-efeito: #000000; 
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--preto-escuro);
+    font-family: var(--fonte-principal);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/ROTARURAL.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    height: 120vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-verde);
+    border-radius: 10px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--botao-verde);
+    color: var(--botao-verde);
+    font-weight: 700;
+}
+
+.botao_secundario:hover {
+    background-color: var(--botao-verde);
+    color: var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 15px;
+    color: var(--preto-escuro);
+}
+
+.container__titulo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--botao-verde);
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--botao-laranja);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--preto-escuro);
+    font-size: 17px;
+    font-weight: 550;
+}
+
+.secundario__botao {
+    background-color: var(--botao-verde);
+    display: inline-block;
+    margin-top: 1em;
+    padding: 10px 20px;
+    color: var(--branco-principal);
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.secundario__botao:hover {
+    background-color: var(--botao-ativo);
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.produtos_lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.produtos {
+    text-align: center;
+    color: var(--preto-escuro);
+}
+
+.produtos_titulo {
+    font-size: 20px;
+    color: var(--preto-escuro);
+}
+
+.lista_item {
+    font-size: 20px; 
+}
+
+.lista_link {
+    color: var(--preto-escuro);
+    margin-left: 2em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lista_link:hover {
+    color: var(--botao-ativo);
+}
+
+.rodape_lista {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.rodape {
+    text-align: center;
+    background: url("img/rodape-fundo.png");
+    padding: 30px 0;
+    margin: 0;
+    background-color: var(--rodape-fundo);
+    color: var(--branco-principal);
+}
+
+.rodape_texto {
+    font-size: 14px;
+    margin: 1.5em 0;
+    color: var(--branco-principal);
+}
+
+.container_botao:hover {
+    background-color: var(--botao-ativo);
+    color: var(--branco-principal);
+}
+
+.carrossel__texto {
+    margin: 20px 0 0;
+    font-size: 20px;
+    color: var(--botao-verde);
+    text-align: center;
+}
+
+/* Estilo para as imagens do carrossel */
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--verde-principal);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: #444;
+}
+
+.btn-mapa {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  font-weight: 600;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-mapa:hover {
+  background-color: var(--verde-claro);
+  color: #222;
+}
+/* Variáveis de cor e fonte */
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--verde-principal);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: #444;
+}
+
+.btn-mapa {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  font-weight: 600;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-mapa:hover {
+  background-color: var(--verde-claro);
+  color: #222;
+}
+
+.imagem-equipe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid var(--verde-claro);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 1.5em auto 1.5em auto; /* só um espaçamento vertical menor */
+}

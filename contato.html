@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | Conexão Sustentável</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset e fontes */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2e7d32 40%, #a5d6a7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1b3a1b;
+    }
+
+    .login-container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      max-width: 700px;
+      width: 90%;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .login-image {
+      flex: 1 1 300px;
+      background: url('img/login-nature.jpg') center center/cover no-repeat;
+      min-height: 320px;
+    }
+
+    .login-form {
+      flex: 1 1 350px;
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-form h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 2rem;
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.3rem;
+      border: 2px solid #a5d6a7;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    input:focus {
+      outline: none;
+      border-color: #2e7d32;
+    }
+
+    button {
+      background-color: #2e7d32;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    button:hover {
+      background-color: #1b3a1b;
+    }
+
+    .error-msg {
+      color: #e53935;
+      font-weight: 600;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+      display: none;
+      text-align: center;
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 600px) {
+      .login-container {
+        flex-direction: column;
+      }
+      .login-image {
+        min-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-image" aria-hidden="true"></div>
+
+    <form class="login-form" id="loginForm" novalidate>
+      <h1>Login Conexão Sustentável</h1>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="username" />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="••••••••" required autocomplete="current-password" minlength="5" />
+
+      <div class="error-msg" id="errorMsg">E-mail ou senha inválidos.</div>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <footer>© 2025 Conexão Sustentável | Mercedes - PR</footer>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      errorMsg.style.display = 'none';
+
+      const email = form.email.value.trim();
+      const senha = form.senha.value.trim();
+
+      // Validação simples
+      const emailValid = email.includes('@') && email.length > 5;
+      const senhaValid = senha.length >= 5;
+
+      if (emailValid && senhaValid) {
+        // Simula login OK
+        window.location.href = 'servicos.html';
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

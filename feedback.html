@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opinião - Conexão Sustentável</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --azul-escuro: #1e3a8a;
+      --azul-claro: #3b82f6;
+      --cinza-fundo: #f9fafb;
+      --cinza-texto: #374151;
+      --branco: #ffffff;
+      --vermelho-erro: #ef4444;
+      --verde-sucesso: #10b981;
+    }
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--cinza-fundo);
+      color: var(--cinza-texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      background-color: var(--azul-escuro);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    nav a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: var(--azul-claro);
+      color: var(--branco);
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 480px;
+      background: var(--branco);
+      margin: 5rem auto 3rem;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    main h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: var(--azul-escuro);
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    main p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--azul-claro);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: var(--azul-escuro);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: var(--azul-claro);
+      outline: none;
+      box-shadow: 0 0 8px var(--azul-claro);
+    }
+
+    .invalid-feedback {
+      color: var(--vermelho-erro);
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .is-invalid + .invalid-feedback {
+      display: block;
+    }
+
+    button[type="submit"] {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      border: none;
+      padding: 0.9rem 1rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: var(--azul-claro);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.5);
+    }
+
+    #feedbackSucesso {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--verde-sucesso);
+      font-size: 1.1rem;
+      min-height: 24px;
+    }
+
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 1rem 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 520px) {
+      main {
+        margin: 4rem 1rem 3rem;
+        padding: 2rem 1.5rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="feedback.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Deixe Seu Feedback</h2>
+    <p>Queremos ouvir sua opinião sobre os serviços da Conexão Sustentável.</p>
+
+    <form id="formFeedback" novalidate>
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+        <div class="invalid-feedback">Por favor, informe seu nome.</div>
+      </div>
+
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required />
+        <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+      </div>
+
+      <div>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="feedbackSucesso"></div>
+  </main>
+
+  <footer>
+    &copy; 2025 Conexão Sustentável | Av. João XXIII, Mercedes - PR, Brasil
+  </footer>
+
+  <script>
+    const form = document.getElementById('formFeedback');
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const mensagem = document.getElementById('mensagem');
+    const feedback = document.getElementById('feedbackSucesso');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      let valido = true;
+      feedback.textContent = '';
+
+      // Limpar erros anteriores
+      [nome, email, mensagem].forEach(input => input.classList.remove('is-invalid'));
+
+      // Validar nome
+      if (!nome.value.trim()) {
+        nome.classList.add('is-invalid');
+        valido = false;
+      }
+
+      // Validar email
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !regexEmail.test(email.value)) {
+        email.classList.add('is-invalid');
+        valido = false;
+      }
+
+      // Validar mensagem
+      if (!mensagem.value.trim()) {
+        mensagem.classList.add('is-invalid');
+        valido = false;
+      }
+
+      if (valido) {
+        feedback.textContent = '✅ Obrigado pelo seu feedback!';
+        form.reset();
+      }
+    });
+  </script>
+</body>
+
+</html>

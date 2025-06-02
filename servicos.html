@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vídeos | Conectados pela Terra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --fundo: #fefcf6;
+      --verde: #4CAF50;
+      --verde-escuro: #2e7d32;
+      --terracota: #d96c3b;
+      --texto: #333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--verde-escuro);
+    }
+
+    header p {
+      color: var(--terracota);
+      font-size: 1.1rem;
+    }
+
+    .botao-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .botao-container a {
+      background-color: var(--verde-escuro);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .botao-container a:hover {
+      background-color: var(--terracota);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .video-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: scale(1.01);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      color: var(--verde-escuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .card-content a {
+      background-color: var(--verde);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .card-content a:hover {
+      background-color: var(--terracota);
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎥 Conectados pela Terra</h1>
+    <p>Festejando a Conexão entre o Campo e a Cidade</p>
+
+    <div class="botao-container">
+      <a href="index.html">Início</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="materias.html">Matérias</a>  <!-- Botão Matérias adicionado -->
+    </div>
+  </header>
+
+  <section class="video-grid">
+    <!-- CARD 1 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/n8RcQM5MIr8/hqdefault.jpg" alt="Agro e Arte: Conexão entre o Campo e a Cidade" class="thumbnail" />
+      <div class="card-content">
+        <h3>Agro e Arte: Conexão entre o Campo e a Cidade</h3>
+        <p>Explora como a arte e a cultura rural se conectam com o ambiente urbano, destacando eventos e manifestações culturais que celebram essa união.</p>
+        <a href="https://www.youtube.com/watch?v=n8RcQM5MIr8" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/PFm7-ARQIzE/hqdefault.jpg" alt="Relação entre a Cidade e o Campo" class="thumbnail" />
+      <div class="card-content">
+        <h3>Relação entre a Cidade e o Campo</h3>
+        <p>Análise sobre as interações e influências mútuas entre áreas urbanas e rurais, discutindo aspectos sociais e econômicos.</p>
+        <a href="https://www.youtube.com/watch?v=PFm7-ARQIzE" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/F_MzLFrB9vo/hqdefault.jpg" alt="Conexão Campo Cidade - Evento" class="thumbnail" />
+      <div class="card-content">
+        <h3>Conexão Campo Cidade - 01/07/24</h3>
+        <p>Cobertura de um evento que celebra a integração entre o campo e a cidade, com destaque para atividades culturais e comunitárias.</p>
+        <a href="https://www.youtube.com/watch?v=F_MzLFrB9vo" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/f94WuI6L48w/hqdefault.jpg" alt="Conexão Agro - Jataí, Goiás" class="thumbnail" />
+      <div class="card-content">
+        <h3>Conexão Agro | 01/06/2025</h3>
+        <p>Programa que celebra os 130 anos de Jataí, Goiás, destacando obras, festas e o papel do agronegócio na cidade.</p>
+        <a href="https://www.youtube.com/watch?v=f94WuI6L48w" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/EN70FyfdukY/hqdefault.jpg" alt="Passeio a Cavalo em Rancho de Toledo" class="thumbnail" />
+      <div class="card-content">
+        <h3>Conexão com a Natureza: Passeio a Cavalo em Rancho de Toledo</h3>
+        <p>Vídeo que mostra um passeio a cavalo em um rancho de Toledo, celebrando o contato com o campo e a vida em família.</p>
+        <a href="https://www.youtube.com/watch?v=EN70FyfdukY" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="video-card">
+      <img src="https://img.youtube.com/vi/LR1RuL208rY/hqdefault.jpg" alt="O Rato do Campo e o Rato da Cidade" class="thumbnail" />
+      <div class="card-content">
+        <h3>O Rato do Campo e o Rato da Cidade</h3>
+        <p>Fábula clássica que ilustra as diferenças entre a vida no campo e na cidade, com uma lição sobre escolhas e valores.</p>
+        <a href="https://www.youtube.com/watch?v=LR1RuL208rY" target="_blank" rel="noopener noreferrer">Assistir</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Conectados pela Terra — Todos os direitos reservados
+  </footer>
+
+</body>
+</html>

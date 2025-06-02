@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matérias e Reportagens | Conectados pela Terra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --fundo: #fefcf6;
+      --verde: #4CAF50;
+      --verde-escuro: #2e7d32;
+      --terracota: #d96c3b;
+      --texto: #333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--verde-escuro);
+    }
+
+    header p {
+      color: var(--terracota);
+      font-size: 1.1rem;
+    }
+
+    .botao-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .botao-container a {
+      background-color: var(--verde-escuro);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-container a:hover {
+      background-color: var(--terracota);
+    }
+
+    .materia-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .materia-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .materia-card:hover {
+      transform: scale(1.02);
+    }
+
+    .thumbnail-container {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .thumbnail-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      color: var(--verde-escuro);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .card-content a {
+      background-color: var(--verde);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-content a:hover {
+      background-color: var(--terracota);
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📰 Matérias e Reportagens</h1>
+    <p>Conteúdos que celebram a conexão entre o campo e a cidade</p>
+
+    <div class="botao-container">
+      <a href="index.html">Início</a>
+      <a href="feedback.html">Feedback</a>
+       <a href="servicos.html">videos</a>
+
+    </div>
+  </header>
+
+  <section class="materia-grid" aria-label="Matérias e Reportagens">
+
+    <div class="materia-card">
+      <div class="thumbnail-container">
+        <img src="img/campo-cidade-1.jpg" alt="Campo e cidade: relações e desafios" />
+      </div>
+      <div class="card-content">
+        <h3>Campo e Cidade: Relações e Desafios</h3>
+        <p>Entenda as dinâmicas entre áreas rurais e urbanas e como elas se influenciam mutuamente.</p>
+        <a href="https://humanidades.com/br/campo-e-cidade/" target="_blank" rel="noopener noreferrer">Ler matéria</a>
+      </div>
+    </div>
+
+    <div class="materia-card">
+      <div class="thumbnail-container">
+        <img src="img/campo-cidade-2.jpg" alt="Explorando a cidade e o campo" />
+      </div>
+      <div class="card-content">
+        <h3>Explorando a Cidade e o Campo: Diferenças e Conexões</h3>
+        <p>Uma análise das características que distinguem e aproximam o campo e a cidade.</p>
+        <a href="https://planejamentosdeaula.com/explorando-a-cidade-e-o-campo-diferencas-e-conexoes/#gsc.tab=0" target="_blank" rel="noopener noreferrer">Ler reportagem</a>
+      </div>
+    </div>
+
+    <div class="materia-card">
+      <div class="thumbnail-container">
+        <img src="img/campo-cidade-3.jpg" alt="Relações entre cidade e campo" />
+      </div>
+      <div class="card-content">
+        <h3>Relações entre Cidade e Campo</h3>
+        <p>Um olhar sobre as interações sociais, econômicas e culturais entre esses dois espaços.</p>
+        <a href="https://meuartigo.brasilescola.uol.com.br/geografia/as-relacoes-entre-cidade-campo.htm" target="_blank" rel="noopener noreferrer">Ler matéria</a>
+      </div>
+    </div>
+
+    <div class="materia-card">
+      <div class="thumbnail-container">
+        <img src="img/campo-cidade-4.jpg" alt="PDF sobre campo e cidade" />
+      </div>
+      <div class="card-content">
+        <h3>Documento Educacional: Campo e Cidade</h3>
+        <p>Material em PDF que aborda o tema para fins educacionais e reflexão.</p>
+        <a href="https://acervocmsp.educacao.sp.gov.br/93255/567981.pdf" target="_blank" rel="noopener noreferrer">Abrir documento</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Conectados pela Terra — Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
